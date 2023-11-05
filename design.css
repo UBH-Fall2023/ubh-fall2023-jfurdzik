@@ -10,3 +10,24 @@ h1 {
     font-size: 50px;
 }
 
+
+#home-buttons{
+    margin-top: 10%;
+    padding: 0px 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-buttons-style {
+    height: 200%;
+    width: 150%;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgb(12, 12, 18);
+}
