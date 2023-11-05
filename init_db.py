@@ -8,8 +8,8 @@ with open('schema.sql') as f:
 
 cur = connection.cursor()
 
-cur.execute("INSERT INTO entries (content) VALUES ('content goes here')")
-cur.execute("INSERT INTO entries (content) VALUES ('more content goes here')")
+#cur.execute("INSERT INTO entries (content) VALUES ('content goes here')")
+#cur.execute("INSERT INTO entries (content) VALUES ('more content goes here')")
 
 connection.commit()
 connection.close()
