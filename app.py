@@ -24,7 +24,7 @@ def get():
     conn = get_db_connection()
     #entry = conn.execute('SELECT * FROM entries WHERE id IN (SELECT id FROM entries ORDER BY RANDOM() LIMIT 1)').fetchone()
     #entry = 'hey'
-    entry = conn.execute('SELECT * FROM entries').fetchall()
+    entry = conn.execute('SELECT * FROM entries ORDER BY random() LIMIT 1').fetchall()
     conn.close()
     return render_template('get.html', entry=entry)
 
