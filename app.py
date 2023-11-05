@@ -1,5 +1,5 @@
 import sqlite3
-from flask import Flask, render_template 
+from flask import Flask, render_template, request 
 
 def get_db_connection():
     conn = sqlite3.connect('database.db')
@@ -11,9 +11,17 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route("/add.html")
+@app.route("/add.html", methods=('GET', 'POST'))
 def add():
-    return render_template('add.html')
+    if request.method == 'POST':
+        content = request.form['addNote']
+        conn = get_db_connection()
+        conn.execute("INSERT INTO entries (content) VALUES (?)", (content,))
+        conn.commit()
+        conn.close()
+        return render_template('add.html')
+    else:
+        return render_template('add.html')
 
 @app.route("/index.html")
 def indexLink():
