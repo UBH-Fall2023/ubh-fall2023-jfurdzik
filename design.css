@@ -12,7 +12,7 @@ h1 {
 
 
 #home-buttons{
-    margin-top: 10%;
+    /*margin-top: 10%;*/
     padding: 0px 20%;
     display: flex;
     justify-content: space-between;
