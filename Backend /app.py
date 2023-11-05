@@ -6,4 +6,4 @@ app = Flask(__name__)
 def index():
     return "<p>Hello, World!</p>"
 
-#app.run(host="localhost", port="8080", debug=True)
+app.run(host="localhost", port="8080", debug=True)
