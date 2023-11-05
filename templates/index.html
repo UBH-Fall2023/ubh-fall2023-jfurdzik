@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="design.css">
+    <!--<link rel="stylesheet" href="design.css">-->
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/design.css') }}">
     <title>Happy Jars</title>
     <!--google fonts stuff-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +25,8 @@
 <body>
 
     <h1>Happy Jars</h1>
-    <img src="jar.png" class="center">
+    <!--<img src="jar.png" class="center">-->
+    <img src="{{url_for('static', filename='jar.png')}}" class="center">
 
     <div id="home-buttons">
 
