@@ -25,6 +25,13 @@
         <input type="submit" value="Home" />
     </form>
     <img src="{{url_for('static', filename='heart-note.jpg')}}" class = "center">
+    <!--p>{{entry}}</p-->
+    {% block content %}
+    {% for e in entry %}
+        <h2>{{ e['content'] }}</h2>
+    {% endfor %}
+    {% endblock %}
     <p>get another</p>
+
 </body>
 </html>
